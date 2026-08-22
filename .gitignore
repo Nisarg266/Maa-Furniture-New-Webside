@@ -1,0 +1,11 @@
+# Ignore temporary / brain files
+.gemini/
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Ignore recursive junction
+**/wp-content/uploads/uploads/
+**/uploads/uploads/
