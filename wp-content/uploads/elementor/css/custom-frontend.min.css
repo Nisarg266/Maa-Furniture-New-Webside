@@ -565,3 +565,220 @@ html.mobile-nav-active .antra-mobile-nav .handheld-navigation > ul > li:nth-chil
     background: rgba(181, 141, 83, 0.12) !important;
     padding-left: 26px !important;
 }
+
+
+/* ==========================================================================
+   MOBILE FOOTER OPTIMIZATION - LUXURIOUS, BALANCED & RESPONSIVE
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Main Footer Container */
+    .elementor-46 .elementor-element.elementor-element-6632dbf,
+    footer .elementor-element-6632dbf {
+        padding: 0 !important;
+        background-color: #1a1918 !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    /* Inner 4-Columns Container */
+    .elementor-46 .elementor-element.elementor-element-af5145f,
+    footer .elementor-element-af5145f {
+        padding: 40px 18px 25px 18px !important;
+        background-color: #272625D9 !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-af5145f > .e-con-inner,
+    footer .elementor-element-af5145f > .e-con-inner {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 0px !important;
+        width: 100% !important;
+    }
+
+    /* Column 1: Logo & Brand Summary (Full Width Centered) */
+    .elementor-46 .elementor-element.elementor-element-a7c1aa9,
+    footer .elementor-element-a7c1aa9 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 0 20px 0 !important;
+        margin: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        margin-bottom: 25px !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-061bb81,
+    footer .elementor-element-061bb81 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto 12px auto !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-061bb81 .hfe-site-logo-container,
+    footer .elementor-element-061bb81 .hfe-site-logo-container {
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-061bb81 img,
+    footer .elementor-element-061bb81 img {
+        width: 170px !important;
+        max-width: 60vw !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-7a88aea,
+    .elementor-46 .elementor-element.elementor-element-010b7a2,
+    footer .elementor-element-7a88aea,
+    footer .elementor-element-010b7a2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto 8px auto !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-7a88aea .elementor-heading-title,
+    footer .elementor-element-7a88aea .elementor-heading-title {
+        font-size: 15px !important;
+        line-height: 22px !important;
+        color: #e5e5e8 !important;
+        text-align: center !important;
+    }
+
+    /* Column 2 & 3: Navigation Links (Clean 2-Column Side-by-Side Grid) */
+    .elementor-46 .elementor-element.elementor-element-c979888,
+    footer .elementor-element-c979888 {
+        width: 48% !important;
+        flex: 0 0 48% !important;
+        max-width: 48% !important;
+        padding: 0 0 0 8px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-9e2737d,
+    footer .elementor-element-9e2737d {
+        width: 48% !important;
+        flex: 0 0 48% !important;
+        max-width: 48% !important;
+        padding: 0 0 0 8px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-8d6a090 .elementor-icon-list-item,
+    footer .elementor-element-8d6a090 .elementor-icon-list-item {
+        padding: 4px 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-8d6a090 .elementor-icon-list-item > a,
+    .elementor-46 .elementor-element.elementor-element-8d6a090 .elementor-icon-list-text,
+    footer .elementor-element-8d6a090 .elementor-icon-list-item > a,
+    footer .elementor-element-8d6a090 .elementor-icon-list-text {
+        font-size: 14.5px !important;
+        line-height: 28px !important;
+        color: #dcdce0 !important;
+        letter-spacing: 0.3px !important;
+        transition: color 0.25s ease !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-8d6a090 .elementor-icon-list-item > a:hover,
+    footer .elementor-element-8d6a090 .elementor-icon-list-item > a:hover {
+        color: var(--e-global-color-primary, #b58d53) !important;
+    }
+
+    /* Column 4: Contact, Phone & Location (Full Width Centered Box) */
+    .elementor-46 .elementor-element.elementor-element-6159a13,
+    footer .elementor-element-6159a13 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 22px 15px !important;
+        margin: 25px 0 0 0 !important;
+        background: rgba(0, 0, 0, 0.25) !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(181, 141, 83, 0.25) !important;
+        box-sizing: border-box !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-640aba9,
+    footer .elementor-element-640aba9 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-e06bb3b,
+    .elementor-46 .elementor-element.elementor-element-4594383,
+    footer .elementor-element-e06bb3b,
+    footer .elementor-element-4594383 {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 0 10px 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-e06bb3b .elementor-heading-title,
+    .elementor-46 .elementor-element.elementor-element-4594383 .elementor-heading-title,
+    footer .elementor-element-e06bb3b .elementor-heading-title,
+    footer .elementor-element-4594383 .elementor-heading-title {
+        font-size: 22px !important;
+        line-height: 28px !important;
+        font-weight: 700 !important;
+        color: var(--e-global-color-primary, #b58d53) !important;
+        letter-spacing: 0.8px !important;
+        text-align: center !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-e06bb3b .elementor-heading-title a,
+    .elementor-46 .elementor-element.elementor-element-4594383 .elementor-heading-title a,
+    footer .elementor-element-e06bb3b .elementor-heading-title a,
+    footer .elementor-element-4594383 .elementor-heading-title a {
+        color: var(--e-global-color-primary, #b58d53) !important;
+        text-decoration: none !important;
+    }
+
+    /* Watermark on Mobile */
+    .elementor-46 .elementor-element.elementor-element-62507a3,
+    footer .elementor-element-62507a3 {
+        bottom: 75px !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-62507a3 .elementor-heading-title,
+    footer .elementor-element-62507a3 .elementor-heading-title {
+        font-size: clamp(24px, 7.5vw, 42px) !important;
+        letter-spacing: 4px !important;
+        color: rgba(255, 255, 255, 0.065) !important;
+    }
+
+    /* Bottom Developer Credit Bar (Padded above fixed mobile toolbar) */
+    .elementor-46 .elementor-element.elementor-element-6705f8e,
+    footer .elementor-element-6705f8e {
+        padding: 22px 15px 80px 15px !important;
+        text-align: center !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .elementor-46 .elementor-element.elementor-element-b33d3c1 p,
+    footer .elementor-element-b33d3c1 p {
+        font-size: 13.5px !important;
+        line-height: 20px !important;
+        text-align: center !important;
+    }
+}
