@@ -165,3 +165,138 @@ footer .elementor-element-6705f8e {
         bottom: 5px !important;
     }
 }
+
+
+/* Mobile Header - Logo Aligned to Far Right & Hamburger to Left */
+@media (max-width: 1024px) {
+    .elementor-42 .elementor-element.elementor-element-2233113a,
+    header .elementor-element-2233113a,
+    .elementor-header .elementor-element-2233113a {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    .elementor-42 .elementor-element.elementor-element-3d4340b9,
+    header .elementor-element-3d4340b9,
+    .elementor-header .elementor-element-3d4340b9 {
+        margin-left: auto !important;
+        margin-right: 0px !important;
+        text-align: right !important;
+    }
+    .elementor-42 .elementor-element.elementor-element-3d4340b9 > .elementor-widget-container,
+    header .elementor-element-3d4340b9 > .elementor-widget-container {
+        margin: 0px !important;
+        text-align: right !important;
+    }
+    .elementor-42 .elementor-element.elementor-element-3d4340b9 .hfe-site-logo-container,
+    header .elementor-element-3d4340b9 .hfe-site-logo-container,
+    header .elementor-widget-site-logo .hfe-site-logo-container {
+        text-align: right !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    .elementor-42 .elementor-element.elementor-element-3d4340b9 .hfe-site-logo-img,
+    header .elementor-element-3d4340b9 .hfe-site-logo-img {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+/* Mobile Bottom Bar (2 Buttons: Search & Account) - Premium Styling */
+.elementor-47 {
+    display: block !important;
+}
+@media (min-width: 1025px) {
+    .elementor-47 {
+        display: none !important;
+    }
+}
+.elementor-47 .elementor-element.elementor-element-369b4db {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.07) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.elementor-47 .elementor-element.elementor-element-369b4db > .e-con-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: stretch !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.elementor-47 .elementor-element.elementor-element-2e74342,
+.elementor-47 .elementor-element.elementor-element-a8c3e80 {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 1 1 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 14px 10px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+.elementor-47 .elementor-element.elementor-element-a8c3e80 {
+    border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.elementor-47 .elementor-element.elementor-element-3c6adf2 {
+    display: none !important;
+}
+.elementor-47 .site-header-search,
+.elementor-47 .site-header-search a,
+.elementor-47 .elementor-icon-box-wrapper,
+.elementor-47 .elementor-icon-box-icon,
+.elementor-47 .elementor-icon-box-icon a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+}
+.elementor-47 .button-search-popup i,
+.elementor-47 .elementor-icon-box-icon svg {
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+    color: #272625 !important;
+    fill: #272625 !important;
+    line-height: 1 !important;
+    transition: all 0.25s ease !important;
+}
+.elementor-47 .button-search-popup .content,
+.elementor-47 .elementor-icon-box-content,
+.elementor-47 .elementor-icon-box-title {
+    display: none !important;
+    font-size: 0px !important;
+    line-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.elementor-47 .button-search-popup:hover i,
+.elementor-47 .button-search-popup:active i {
+    color: var(--e-global-color-primary, #b58d53) !important;
+    transform: scale(1.15) !important;
+}
+.elementor-47 .elementor-icon-box-icon a:hover svg,
+.elementor-47 .elementor-icon-box-icon a:active svg {
+    fill: var(--e-global-color-primary, #b58d53) !important;
+    transform: scale(1.15) !important;
+}
