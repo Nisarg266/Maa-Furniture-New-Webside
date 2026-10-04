@@ -14243,7 +14243,7 @@ footer .elementor-element.elementor-element-408bc6f {
 .elementor-46 .elementor-element.elementor-element-6632dbf:not(.elementor-motion-effects-element-type-background),
 .elementor-46 .elementor-element.elementor-element-6632dbf > .elementor-motion-effects-container > .elementor-motion-effects-layer,
 footer .elementor-element.elementor-element-6632dbf {
-    background-image: url("./wp-content/uploads/2025/06/foter-bg.jpg") !important;
+    background-image: url("../../uploads/2025/06/foter-bg.jpg") !important;
     background-position: top center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -14940,3 +14940,218 @@ html.mobile-nav-active .antra-mobile-nav .handheld-navigation > ul > li:nth-chil
         text-align: center !important;
     }
 }
+
+/* ==========================================================================
+   Maa Furniture - Smart Sticky Auto-Hide Header
+   - Transparent at top of page
+   - Slides up (hides) on scroll down
+   - Slides down (reveals with luxury glass backdrop) on scroll up
+   - Buttery smooth cubic-bezier animation
+   ========================================================================== */
+#masthead,
+#masthead .elementor-42,
+#masthead .header-absolute {
+  overflow: visible !important;
+}
+
+#masthead .header-absolute,
+#masthead.maa-smart-header {
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.32s ease,
+              box-shadow 0.32s ease,
+              border-color 0.32s ease,
+              backdrop-filter 0.32s ease,
+              -webkit-backdrop-filter 0.32s ease !important;
+  will-change: transform;
+}
+
+#masthead .header-absolute.maa-header-top,
+#masthead.maa-header-top {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(0) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+#masthead .header-absolute.maa-header-hidden,
+#masthead.maa-header-hidden {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999 !important;
+  transform: translateY(-115%) !important;
+  pointer-events: none !important;
+  background: rgba(18, 16, 14, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+#masthead .header-absolute.maa-header-pinned,
+#masthead.maa-header-pinned {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999 !important;
+  transform: translateY(0) !important;
+  pointer-events: all !important;
+  background: rgba(18, 16, 14, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+  border-bottom: 1px solid rgba(202, 160, 92, 0.25) !important;
+}
+
+.elementor-42 #masthead .header-absolute.maa-header-pinned,
+#masthead .header-absolute.maa-header-pinned {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+@media (max-width: 1024px) {
+  .elementor-42 #masthead .header-absolute.maa-header-pinned,
+  #masthead .header-absolute.maa-header-pinned {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+}
+
+/* ==========================================================================
+   Maa Furniture - Universal Header Consistency & Layout Protection
+   Prevents header items from wrapping, disappearing, or overflowing on any screen.
+   ========================================================================== */
+#masthead .elementor-element-3ae6e686 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#masthead .elementor-element-2233113a {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: none !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+#masthead .elementor-element-3023e72a {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  width: auto !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  margin-left: 20px !important;
+  gap: 16px !important;
+}
+
+#masthead .elementor-element-3d4340b9 {
+  flex: 0 0 auto !important;
+}
+
+#masthead .elementor-element-3d4340b9 > .elementor-widget-container {
+  margin: -2px 28px 0 0 !important;
+}
+
+#masthead .elementor-element-e722053 {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+#masthead .elementor-element-e722053 .main-navigation ul.menu {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: clamp(8px, 1.2vw, 22px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#masthead .elementor-element-e722053 .main-navigation ul.menu > li.menu-item {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+#masthead .elementor-element-e722053 .main-navigation ul.menu > li.menu-item > a {
+  white-space: nowrap !important;
+  font-size: 14px !important;
+  padding: 8px 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Submenu dropdown luxury styling */
+#masthead .elementor-element-e722053 .main-navigation ul.menu li ul.sub-menu {
+  background: rgba(18, 16, 14, 0.97) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(202, 160, 92, 0.25) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+  border-radius: 8px !important;
+  padding: 10px 0 !important;
+}
+
+#masthead .elementor-element-e722053 .main-navigation ul.menu li ul.sub-menu li a {
+  color: #f0f0f0 !important;
+  padding: 8px 20px !important;
+  transition: all 0.22s ease !important;
+}
+
+#masthead .elementor-element-e722053 .main-navigation ul.menu li ul.sub-menu li a:hover {
+  color: #CAA05C !important;
+  background: rgba(202, 160, 92, 0.12) !important;
+  padding-left: 24px !important;
+}
+
+/* Right container elements (Call Us, Free Price Estimate, Profile Icon) */
+#masthead .elementor-element-65ff6f95 {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+#masthead .elementor-element-e27b232 {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+#masthead .elementor-element-5539ec0 {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Ensure Call Us is never accidentally hidden on laptop/desktop viewports */
+@media (min-width: 1025px) {
+  #masthead .elementor-element-65ff6f95.elementor-hidden-tablet_extra {
+    display: inline-flex !important;
+  }
+}
+

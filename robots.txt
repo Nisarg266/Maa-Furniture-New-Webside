@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# WordPress API dumps - not for search engines
+Disallow: /wp-json/
+
+# Crawler-artifact duplicate pages (query-string snapshots)
+Disallow: /*.html@
+
+# Utility / thin pages
+Disallow: /search/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /*/feed/
+Disallow: /feed/
+Disallow: /comments/
+
+# NOTE: after the site goes live on its real domain, add this line
+# with the full URL (must be absolute):
+# Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, follow"/>
+<title>Page Not Found - Maa Furniture</title>
+<meta name="description" content="The page you are looking for could not be found. Explore Maa Furniture interior design services, projects and design ideas."/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{min-height:100vh;background:#0e0a06;color:#f7f2e9;font-family:'Golos Text','Segoe UI',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .card{max-width:520px;width:100%;text-align:center;}
+  .mark{width:64px;height:64px;margin:0 auto 26px;border:1.5px solid #c8a35f;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:#c8a35f;}
+  .code{font-size:88px;font-weight:600;line-height:1;color:#c8a35f;letter-spacing:4px;}
+  h1{font-size:22px;font-weight:600;margin:16px 0 10px;letter-spacing:.5px;}
+  p{color:#a89a83;font-size:15px;line-height:1.65;margin-bottom:30px;}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  a.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:.3s;}
+  a.primary{background:#c8a35f;color:#0e0a06;}
+  a.primary:hover{background:#e2c185;}
+  a.ghost{border:1px solid rgba(200,163,95,.5);color:#c8a35f;}
+  a.ghost:hover{background:#c8a35f;color:#0e0a06;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="mark">M</div>
+  <div class="code">404</div>
+  <h1>Page Not Found</h1>
+  <p>The page you are looking for may have been moved or no longer exists.<br/>Let's get you back to beautiful interiors.</p>
+  <div class="btns">
+    <a class="btn primary" href="/">Go to Homepage</a>
+    <a class="btn ghost" href="/contact-us/">Contact Us</a>
+  </div>
+</div>
+<script>
+// If hosted under a sub-path (e.g. GitHub Pages project site), fix the buttons.
+(function(){
+  var path = location.pathname.replace(/\/[^/]*$/,'/');
+  document.querySelector('.primary').href = path;
+  document.querySelector('.ghost').href = path + 'contact-us/';
+})();
+</script>
+</body>
+</html>

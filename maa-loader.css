@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Maa Furniture - Luxury Minimalist White Splash Screen
+   - Clean, architectural luxury aesthetic matching the white & light theme
+   - Champagne gold (#CAA05C) accent with warm porcelain background
+   - Silky smooth, rapid progress indicator (0.8s - 1.1s)
+   - Graceful mist fade-out with zero page lag
+   ========================================================================== */
+
+/* Prevent body scrolling while splash is active */
+html.maa-loading-locked,
+body.maa-loading-locked {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* Splash Screen Container - Light Luxury Theme */
+#maa-splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF8F5;
+  background-image: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #FAF8F5 65%, #F4EFE6 100%);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s;
+  will-change: opacity;
+}
+
+/* Exit Transition */
+#maa-splash-screen.maa-splash-exit {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Inner Centered Content */
+.maa-splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  max-width: 440px;
+  width: 90%;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+#maa-splash-screen.maa-splash-exit .maa-splash-inner {
+  transform: translateY(-12px) scale(0.98);
+  opacity: 0;
+}
+
+/* Logo Wrap */
+.maa-splash-logo-wrap {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maa-splash-logo {
+  width: clamp(140px, 32vw, 175px);
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
+  animation: maaLogoFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes maaLogoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand Subtitle / Tagline */
+.maa-splash-tagline {
+  font-family: "Golos Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(10px, 2.4vw, 11.5px);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #7D756D;
+  margin: 0 0 28px 0;
+  padding-left: 0.28em; /* optical balance for letter spacing */
+  opacity: 0.9;
+  animation: maaTextFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+@keyframes maaTextFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+/* Sleek Minimalist Progress Section */
+.maa-splash-progress-wrap {
+  width: clamp(160px, 50vw, 210px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: maaBarFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@keyframes maaBarFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.maa-splash-track {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(202, 160, 92, 0.2);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.maa-splash-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: linear-gradient(90deg, #CAA05C 0%, #E0BF82 100%);
+  border-radius: 99px;
+  transition: width 0.12s cubic-bezier(0.12, 0.8, 0.2, 1);
+  will-change: width;
+}
+
+/* Status Label & Percentage */
+.maa-splash-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Golos Text", -apple-system, sans-serif;
+  font-size: 11px;
+  color: #A39B93;
+  letter-spacing: 0.06em;
+  padding: 0 1px;
+}
+
+.maa-splash-status {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #999086;
+}
+
+.maa-splash-num {
+  font-family: "Cal Sans", "Golos Text", monospace;
+  font-weight: 600;
+  color: #CAA05C;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .maa-splash-tagline {
+    letter-spacing: 0.2em;
+    margin-bottom: 22px;
+  }
+  .maa-splash-progress-wrap {
+    width: 170px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .maa-splash-logo,
+  .maa-splash-tagline,
+  .maa-splash-progress-wrap {
+    animation: none !important;
+  }
+  #maa-splash-screen {
+    transition: opacity 0.3s ease !important;
+  }
+}

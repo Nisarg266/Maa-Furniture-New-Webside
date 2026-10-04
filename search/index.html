@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, follow"/>
+<title>Search - Maa Furniture</title>
+<meta name="description" content="Search Maa Furniture - interior design services, design ideas, projects, products and more."/>
+<style>
+  :root{--gold:#c8a35f;--gold-2:#e2c185;--ink:#0e0a06;--ink-2:#171208;--paper:#f7f2e9;--muted:#a89a83;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--ink);color:var(--paper);font-family:'Golos Text','Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+  a{color:inherit;text-decoration:none;}
+  header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(200,163,95,.25);}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--gold);letter-spacing:.5px;}
+  .brand-name{font-size:17px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;}
+  .brand-name span{color:var(--gold);}
+  .home-link{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,163,95,.5);padding:9px 16px;border-radius:999px;transition:.3s;}
+  .home-link:hover{background:var(--gold);color:var(--ink);}
+  main{flex:1;width:100%;max-width:880px;margin:0 auto;padding:56px 24px 72px;}
+  h1{font-size:clamp(26px,5vw,40px);font-weight:600;margin-bottom:8px;}
+  h1 em{color:var(--gold);font-style:normal;}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:32px;}
+  .search-box{display:flex;gap:10px;margin-bottom:40px;}
+  .search-box input{flex:1;background:var(--ink-2);border:1px solid rgba(200,163,95,.35);border-radius:12px;padding:15px 18px;font-size:16px;color:var(--paper);outline:none;transition:.3s;}
+  .search-box input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,163,95,.15);}
+  .search-box button{background:var(--gold);color:var(--ink);border:0;border-radius:12px;padding:15px 28px;font-size:14px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:.3s;}
+  .search-box button:hover{background:var(--gold-2);}
+  .stats{font-size:13px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:22px;}
+  ul.results{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  ul.results li a{display:block;background:var(--ink-2);border:1px solid rgba(200,163,95,.18);border-radius:14px;padding:20px 22px;transition:.3s;}
+  ul.results li a:hover{border-color:var(--gold);transform:translateX(4px);}
+  .r-title{font-size:17px;font-weight:600;color:var(--gold-2);margin-bottom:5px;}
+  .r-desc{font-size:14px;color:var(--muted);line-height:1.5;}
+  .empty{background:var(--ink-2);border:1px dashed rgba(200,163,95,.35);border-radius:14px;padding:44px 24px;text-align:center;color:var(--muted);}
+  .empty b{display:block;color:var(--paper);font-size:18px;margin-bottom:8px;font-weight:600;}
+  footer{padding:22px 24px;text-align:center;font-size:12px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;border-top:1px solid rgba(200,163,95,.25);}
+  footer a{color:var(--gold);}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-name">Maa <span>Furniture</span></span>
+  </a>
+  <a class="home-link" href="../index.html">Back to Home</a>
+</header>
+<main>
+  <h1>Search <em>Results</em></h1>
+  <p class="sub">Find services, design ideas, projects, products and pages across the site.</p>
+  <form class="search-box" action="index.html" method="get">
+    <input type="search" name="s" id="s" placeholder="Search e.g. modular kitchen, wardrobe, balcony..." aria-label="Search" autofocus/>
+    <button type="submit">Search</button>
+  </form>
+  <div class="stats" id="stats"></div>
+  <ul class="results" id="results"></ul>
+</main>
+<footer>Maa Furniture &middot; Interior Design &amp; Furniture &middot; <a href="tel:+919724086935">+91 97240 86935</a></footer>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search).get('s') || '';
+  var input = document.getElementById('s');
+  var resultsEl = document.getElementById('results');
+  var statsEl = document.getElementById('stats');
+  input.value = q;
+
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+  function render(list, query){
+    statsEl.textContent = list.length + (list.length===1?' result':' results') + (query?(' for "'+query+'"'):'');
+    if(!list.length){
+      resultsEl.outerHTML = '<div class="empty"><b>No results found</b>Try different keywords like kitchen, wardrobe, sofa, gallery, design, blog.</div>';
+      return;
+    }
+    var html = '';
+    for(var i=0;i<Math.min(list.length,50);i++){
+      var r = list[i];
+      html += '<li><a href="../'+r.u+'"><div class="r-title">'+esc(r.t)+'</div>'+(r.d?'<div class="r-desc">'+esc(r.d)+'</div>':'')+'</a></li>';
+    }
+    resultsEl.innerHTML = html;
+  }
+
+  fetch('./search-index.json').then(function(r){return r.json();}).then(function(idx){
+    if(!q){ render(idx.slice(0,20), ''); statsEl.textContent = 'Browse popular pages'; return; }
+    var needle = q.toLowerCase();
+    var tokens = needle.split(/\s+/).filter(Boolean);
+    var scored = [];
+    for(var i=0;i<idx.length;i++){
+      var hay = (idx[i].t+' '+idx[i].u.replace(/[-/]/g,' ')+' '+(idx[i].d||'')).toLowerCase();
+      var score = 0;
+      for(var j=0;j<tokens.length;j++){
+        if(idx[i].t.toLowerCase().indexOf(tokens[j])!==-1) score+=3;
+        if(hay.indexOf(tokens[j])!==-1) score+=1; else { score=-1; break; }
+      }
+      if(score>0) scored.push({r:idx[i],s:score});
+    }
+    scored.sort(function(a,b){return b.s-a.s;});
+    render(scored.map(function(x){return x.r;}), q);
+  }).catch(function(){
+    statsEl.textContent='';
+    resultsEl.outerHTML='<div class="empty"><b>Search unavailable</b>Please check your connection and reload.</div>';
+  });
+})();
+</script>
+</body>
+</html>
