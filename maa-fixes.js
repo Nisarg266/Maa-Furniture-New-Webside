@@ -210,27 +210,29 @@
         '  max-width: 100% !important;' +
         '  box-sizing: border-box !important;' +
         '}' +
-        '#masthead .elementor-element-2233113a {' +
-        '  display: flex !important;' +
-        '  flex-direction: row !important;' +
-        '  flex-wrap: nowrap !important;' +
-        '  align-items: center !important;' +
-        '  width: auto !important;' +
-        '  max-width: none !important;' +
-        '  flex: 1 1 auto !important;' +
-        '  min-width: 0 !important;' +
-        '}' +
-        '#masthead .elementor-element-3023e72a {' +
-        '  display: flex !important;' +
-        '  flex-direction: row !important;' +
-        '  flex-wrap: nowrap !important;' +
-        '  align-items: center !important;' +
-        '  justify-content: flex-end !important;' +
-        '  width: auto !important;' +
-        '  max-width: none !important;' +
-        '  flex: 0 0 auto !important;' +
-        '  margin-left: 20px !important;' +
-        '  gap: 16px !important;' +
+        '@media (min-width: 768px) {' +
+        '  #masthead .elementor-element-2233113a {' +
+        '    display: flex !important;' +
+        '    flex-direction: row !important;' +
+        '    flex-wrap: nowrap !important;' +
+        '    align-items: center !important;' +
+        '    width: auto !important;' +
+        '    max-width: none !important;' +
+        '    flex: 1 1 auto !important;' +
+        '    min-width: 0 !important;' +
+        '  }' +
+        '  #masthead .elementor-element-3023e72a {' +
+        '    display: flex !important;' +
+        '    flex-direction: row !important;' +
+        '    flex-wrap: nowrap !important;' +
+        '    align-items: center !important;' +
+        '    justify-content: flex-end !important;' +
+        '    width: auto !important;' +
+        '    max-width: none !important;' +
+        '    flex: 0 0 auto !important;' +
+        '    margin-left: 20px !important;' +
+        '    gap: 16px !important;' +
+        '  }' +
         '}' +
         '#masthead .elementor-element-e722053 {' +
         '  flex: 1 1 auto !important;' +
@@ -287,9 +289,13 @@
       // 2. Ignore scroll if mobile menu is open
       var isMenuOpen = document.body.classList.contains('menu-mobile-active') ||
                        document.body.classList.contains('canvas-menu-open') ||
+                       document.documentElement.classList.contains('menu-mobile-active') ||
+                       document.documentElement.classList.contains('mobile-nav-active') ||
                        document.querySelector('.antra-canvas-menu.active') ||
                        document.querySelector('.elementor-canvas-menu-wrapper.active') ||
-                       document.querySelector('.menu-mobile-nav-button.active');
+                       document.querySelector('.menu-mobile-nav-button.active') ||
+                       document.querySelector('.menu-mobile-nav-button.open') ||
+                       document.querySelector('.main-navigation.active');
       if (isMenuOpen) {
         ticking = false;
         return;
